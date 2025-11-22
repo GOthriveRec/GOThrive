@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GO Thrive Recruiting | Empower Your Team with Top Remote Talent</title>
+    <meta name="description" content="GO Thrive Recruiting specializes in connecting businesses with exceptional remote talent using AI-driven matchmaking and advanced market analysis.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #6366f1;      /* Indigo */
+            --primary-dark: #4f46e5;
+            --secondary: #0ea5e9;     /* Sky blue */
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #fff;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        
+        nav {
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 100px;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 14px 36px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 10px;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .btn-outline {
+            display: inline-block;
+            border: 2px solid white;
+            color: white;
+            padding: 12px 34px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: var(--light);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+            color: var(--dark);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+        
+        .about-text h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .about-text p {
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+        
+        .features {
+            margin-top: 3rem;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+        
+        .feature-icon {
+            background: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+            font-size: 1.4rem;
+        }
+        
+        /* Why Choose Us */
+        .why-us {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .footer-logo span {
+            color: var(--secondary);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.8rem; }
+            .about-content { grid-template-columns: 1fr; }
+            .nav-links { display: none; } /* Simple mobile - you can add a hamburger menu later */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">GO <span>Thrive</span></div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">How It Works</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>GO Thrive Recruiting</h1>
+            <p class="tagline">Empower Your Team with Top Remote Talent<br>Discover Exceptional Remote Workers for Your Business</p>
+            <div>
+                <a href="#contact" class="btn-primary">Find Talent Now</a>
+                <a href="#about" class="btn-outline">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About GO Thrive Recruiting</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>We Connect You with the Best Remote Talent Worldwide</h3>
+                    <p>GO Thrive Recruiting is a specialized recruitment agency that excels in finding top remote talent for your business. Leveraging advanced market analysis tools and AI-driven matchmaking algorithms, we provide precise insights to elevate your team and drive your business growth.</p>
+                    
+                    <p>Our innovative hiring practices ensure a tailored approach to match remote workers with your company's unique requirements. Our comprehensive needs assessment and strategic analysis offer valuable insights into the remote hiring landscape, ensuring precision in selecting and placing top remote talent.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <div class="feature-icon">🤖</div>
+                            <div>
+                                <h4>AI-Driven Matchmaking</h4>
+                                <p>Advanced algorithms that go beyond skills to match company culture and long-term objectives.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">🌍</div>
+                            <div>
+                                <h4>Global Remote Talent Pool</h4>
+                                <p>Access to exceptional professionals from around the world, ready to join your remote team.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">🚀</div>
+                            <div>
+                                <h4>Personalized Engagement</h4>
+                                <p>Strategies that foster lasting connections and sustained career growth for both parties.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image-placeholder">
+                    <!-- You can replace this with a real image later -->
+                    <div style="background:#e2e8f0; border-radius:16px; height:500px; display:flex; align-items:center; justify-content:center; color:#64748b; font-size:1.2rem;">
+                        Professional Team Collaboration Image
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose GO Thrive Recruiting</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Precision Matching</h3>
+                    <p>Our AI algorithms analyze skills, experience, cultural fit, and long-term potential to deliver candidates who truly thrive in your organization.</p>
+                </div>
+                <div class="card">
+                    <h3>Faster Time-to-Hire</h3>
+                    <p>Streamlined processes and pre-vetted candidates reduce hiring time by up to 70% compared to traditional recruitment methods.</p>
+                </div>
+                <div class="card">
+                    <h3>Cost Effective</h3>
+                    <p>Eliminate overhead from job boards, agencies, and lengthy interview cycles. Only pay for successful placements.</p>
+                </div>
+                <div class="card">
+                    <h3>Guaranteed Fit</h3>
+                    <p>We stand behind our placements with replacement guarantees and ongoing support for the first 90 days.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Build Your Dream Remote Team?</h2>
+            <p style="font-size:1.3rem; margin-bottom: 2rem; opacity:0.9;">Let us help you find exceptional talent that drives real results.</p>
+            <a href="mailto:hello@gothriverecruiting.com" class="btn-primary" style="background:white; color:var(--primary); font-size:1.2rem; padding:16px 40px;">Get Started Today</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">GO <span>Thrive</span></div>
+            <p>Empowering businesses with exceptional remote talent worldwide.</p>
+            <p style="margin-top:2rem; opacity:0.7;">© 2025 GO Thrive Recruiting. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
